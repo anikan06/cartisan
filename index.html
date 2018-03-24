@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartisan </title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--our CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--BootstrapJs-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        <!--Font-awsome JS-->
+        <
+        script;
+        defer;
+        src = "https://use.fontawesome.com/releases/v5.0.8/js/solid.js";
+        integrity = "sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l";
+        crossorigin = "anonymous" ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+            integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<body class="bg-img">
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">
+        <img src="logo.png" class="d-inline-block align-top wdth175">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>-->
+</nav>
+<div class="container-fluid mx-auto mCntr">
+    <div class="row bg-img mx-auto mCntr">
+        <div class="my-auto mx-auto">
+            <div class="text-vertical-center">
+                <div class="intro-lead-in">Car care simplified</div>
+                <div class="intro-lead-in-n">Cartisan addresses common car servicing issues with transparency and
+                    convenience!
+                </div>
+                <div class="row mx-auto">
+                    <!--<div class="col-12 mx-auto fntWht">-->
+                    <!--Select Your Role-->
+                    <!--</div>-->
+                    <div class="row mx-auto">
+                        <div class="col-5 px-0">
+                            <!--<button type="button" class="btn btn-outline-light btn-lg btn-block fntWht btnWd180"
+                                    data-toggle="modal" data-target="#carOwnr">Car Owner</button>-->
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block fntWht btnWd180"
+                                    id="drOwnr">Car Owner
+                            </button>
+                        </div>
+                        <div class="col-2 fntWht py-1">
+                            <h4>Or</h4>
+                        </div>
+                        <div class="col-5 px-0">
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block fntWht btnWd180"
+                                    id="serMod">Service Manager
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--Car owner modal -->
+        <div class="modal fade" id="carOwnr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header  navbar-custom">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Car Owner</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="carModel">Car Model</label>
+                                <select class="form-control" id="carModel">
+                                    <option>Choose Your Car Model</option>
+                                    <option>TATA Tiago</option>
+                                    <option>TATA Tiago</option>
+                                    <option>TATA Tiago</option>
+                                    <option>TATA Tiago</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="serReq">Serice Required</label>
+                                <textarea class="form-control" id="serReq" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="fileUp">Upload Your Car Images</label>
+                                <input type="file" accept=".jpg,.png" class="form-control-file" id="fileUp">
+                                <img id="blah" src="#" alt="your image" height="50" width="50"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Our Script-->
+<script src="js/script.js"></script>
+</body>
+</html>
