@@ -11,6 +11,11 @@
     background-image: url("bg.jpg");
 }
 
+.gallery img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 .mCntr {
     min-height: 500px;
 }

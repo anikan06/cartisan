@@ -69,14 +69,3 @@ function isNumberKey(evt) {
 
     return true;
 }
-
-// function serFetch() {
-//     var nm = document.getElementById('nm');
-//     var ph = document.getElementById('ph');
-//     var cm = document.getElementById('cm');
-//     var sr = document.getElementById('sr');
-//     var pic = document.getElementById('pic');
-//     // nm.innerText += localStorage.getItem(data.name);
-//     var tr = localStorage.getItem('data');
-// }
-
