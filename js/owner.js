@@ -26,7 +26,7 @@ $(function () {
     });
 });
 
-// document.getElementById('subOnrDet').addEventListener('click', store);
+document.getElementById('subOnrDet').addEventListener('click', subOwnDet);
 
 function store() {
     console.log("test565");
@@ -42,13 +42,33 @@ function store() {
         req: inputserReq,
         img: inputglary
     };
-    console.log("thi is 1" + data);
     localStorage.clear();
     var array = JSON.parse(localStorage.getItem('Data') || '[]');
     var ty = array.push(data);
     localStorage.setItem('Data', JSON.stringify(array));
 }
 
+/*Function Validation*/
+
+/*SUBMIT AND CONFIRM*/
+function subOwnDet() {
+    store();
+
+    $('#confirmmodal').modal('show');
+}
+
+function cntnu() {
+    window.location.href = '../index.html';
+}
+
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode != 46 && charCode > 31
+        && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+}
 
 // function serFetch() {
 //     var nm = document.getElementById('nm');

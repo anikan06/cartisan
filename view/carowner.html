@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <!--Font-awsome JS-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js"
             integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
@@ -123,16 +123,18 @@
                     <h4 class="card-title">
                         Register Your service request
                     </h4>
-                    <form>
+                    <form name="ownMod">
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-sm" id="name" placeholder="Full Name">
+                            <input type="text" class="form-control form-control-sm" id="name" placeholder="Full Name"
+                                   required>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control form-control-sm" id="phone"
-                                   placeholder="Phone Number">
+                                   placeholder="Phone Number" required maxlength="10"
+                                   onkeypress="return isNumberKey(event)">
                         </div>
                         <div class="form-group">
-                            <select class="form-control form-control-sm" id="carModel">
+                            <select class="form-control form-control-sm" id="carModel" required>
                                 <option value="not" selected disabled>Choose Your Car Model</option>
                                 <option value="TATA Tiago1">TATA Tiago</option>
                                 <option value="TATA Tiago2">TATA Tiago</option>
@@ -142,7 +144,7 @@
                         </div>
                         <div class="form-group">
                             <textarea class="form-control form-control-sm" placeholder="Service Request" id="serReq"
-                                      rows="3"></textarea>
+                                      rows="3" required></textarea>
                         </div>
                         <div class="form-group form-group-sm" data-toggle="tooltip" data-placement="bottom"
                              title="Click to Upload Your Car Images">
@@ -154,7 +156,7 @@
                         <div class="gallery"></div>
 
                         <div class="text-center">
-                            <button class="btn btn-info btn-sm btn-block" id="subOnrDet" onclick="store()">
+                            <button type="button" class="btn btn-info btn-sm btn-block" id="subOnrDet">
                                 Send Request
                             </button>
 
@@ -163,6 +165,27 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+    <!--confirm Modal-->
+    <div class="modal fade" id="confirmmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You Have Successfully submited your request
+                </div>
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-info" onclick="cntnu()">Continue</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
